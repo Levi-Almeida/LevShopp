@@ -3,6 +3,7 @@
 LeviShop é uma aplicação front-end de e-commerce desenvolvida em **React (JavaScript)** que consome a **API pública DummyJSON** para exibição de produtos em formato de vitrine, com foco em uma experiência moderna, fluida e próxima de um e-commerce real.
 
 O projeto foi desenvolvido com o objetivo de **aprendizado prático**, boas práticas de código e uma base sólida para evolução futura (ex: migração para TypeScript).
+<img width="1904" height="948" alt="{84C0F809-42B6-495B-93A6-C9B5979746F8}" src="https://github.com/user-attachments/assets/0a0cd595-9a1a-471d-86c4-e0828f03ad61" />
 
 ---
 
