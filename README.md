@@ -1,153 +1,88 @@
-LeviShop — E-commerce Front-End em React
+# 🛒 LeviShop — E-commerce Front-end com React
 
-LeviShop é uma aplicação front-end desenvolvida em ReactJS, que consome a API pública DummyJSON para exibir produtos em formato de vitrine (cards), com filtros dinâmicos, infinite scroll, carrinho de compras e uma arquitetura organizada e escalável.
+LeviShop é uma aplicação front-end de e-commerce desenvolvida em **React (JavaScript)** que consome a **API pública DummyJSON** para exibição de produtos em formato de vitrine, com foco em uma experiência moderna, fluida e próxima de um e-commerce real.
 
-O projeto foi desenvolvido com foco em boas práticas, organização de código e experiência do usuário, simulando o funcionamento de um e-commerce real.
+O projeto foi desenvolvido com o objetivo de **aprendizado prático**, boas práticas de código e uma base sólida para evolução futura (ex: migração para TypeScript).
 
-✨ Funcionalidades
+---
 
-📦 Consumo da API pública DummyJSON
+## 🚀 Funcionalidades
 
-🖼️ Exibição de produtos em formato de cards
+- 📦 Listagem de produtos em formato de cards
+- 🔄 **Infinite Scroll** (carregamento automático ao rolar a página)
+- 🔍 Busca de produtos em tempo real
+- 🗂️ Filtro por categorias
+- 🎯 Filtros adicionais:
+  - Preço máximo
+  - Rating mínimo
+  - Marca
+- 🛒 Carrinho de compras lateral (drawer)
+- 📭 Estado visual para **nenhum resultado encontrado**
+- ⚡ Atualização dinâmica sem recarregar a página
+- 🎨 Interface moderna com **Tailwind CSS**
 
-🔍 Busca por nome do produto
+---
 
-🗂️ Filtro por categoria
+## 🧠 Conceitos aplicados
 
-♾️ Infinite Scroll (carregamento automático ao rolar a página)
+- React Hooks (`useState`, `useEffect`, `useRef`)
+- Hooks customizados para regras de negócio
+- Separação entre UI e lógica de dados
+- Consumo de API REST
+- Paginação com `limit` e `skip`
+- Infinite scroll com `IntersectionObserver`
+- Controle de estado global de forma simples
+- Componentização reutilizável
+- Boas práticas de organização e legibilidade
 
-🛒 Carrinho de compras lateral (drawer)
+---
 
-🎨 Estilização moderna com Tailwind CSS
+## 🛠️ Tecnologias utilizadas
 
-🧠 Separação de responsabilidades (hooks, services, components)
+- **React**
+- **JavaScript (ES6+)**
+- **Vite**
+- **Tailwind CSS**
+- **DummyJSON API**
 
-🧱 Tecnologias Utilizadas
+---
 
-ReactJS
+## 🌐 API utilizada
 
-JavaScript (ES6+)
+Os dados dos produtos são consumidos da API pública:
 
-Vite
+- https://dummyjson.com/products
 
-Tailwind CSS
+A API oferece suporte a:
+- Paginação (`limit` e `skip`)
+- Busca (`/search`)
+- Categorias (`/category`)
 
-DummyJSON API
+---
 
-Intersection Observer API
+## ▶️ Como rodar o projeto localmente
 
-🌐 API Utilizada
+### Pré-requisitos
+- Node.js (versão 18 ou superior)
+- npm ou yarn
 
-Documentação:
-👉 https://dummyjson.com/docs/products
+### Passos
 
-Rotas utilizadas:
-
-/products
-
-/products/search
-
-/products/category/:category
-
-📁 Estrutura do Projeto
-src/
-├── components/
-│   ├── Header.jsx
-│   ├── ProductCard.jsx
-│   ├── CartDrawer.jsx
-│   ├── Filters.jsx
-│   └── EmptyState.jsx
-│
-├── pages/
-│   └── Home.jsx
-│
-├── hooks/
-│   └── useProducts.js
-│
-├── services/
-│   └── productsService.js
-│
-├── configs/
-│   └── categories.js
-│
-├── App.jsx
-└── main.jsx
-
-📌 Organização
-
-components/ → Componentes reutilizáveis de UI
-
-pages/ → Páginas da aplicação
-
-hooks/ → Regras de negócio e lógica de dados
-
-services/ → Comunicação com a API
-
-configs/ → Constantes e configurações globais
-
- Arquitetura e Decisões Técnicas
- Hook customizado (useProducts)
-
-Toda a lógica de:
-
-paginação
-
-busca
-
-filtros
-
-controle de loading
-
-infinite scroll
-
-foi encapsulada em um hook customizado, mantendo os componentes limpos e focados apenas na renderização.
-
- Infinite Scroll
-
-O carregamento de novos produtos é feito automaticamente utilizando a Intersection Observer API, sem necessidade de botões de paginação.
-
- Filtros
-
-Os filtros são aplicados de forma dinâmica e continuam funcionando mesmo quando novos produtos são carregados via scroll.
-
- Estilização
-
-O projeto utiliza Tailwind CSS, permitindo:
-
-layout responsivo
-
-design moderno
-
-código CSS limpo e escalável
-
-▶️ Como rodar o projeto
-1️⃣ Clonar o repositório
+```bash
+# Clone o repositório
 git clone https://github.com/seu-usuario/levishop.git
 
-2️⃣ Acessar a pasta
+# Entre na pasta do projeto
 cd levishop
 
-3️⃣ Instalar as dependências
+# Instale as dependências
 npm install
 
-4️⃣ Rodar o projeto
+# Inicie o servidor de desenvolvimento
 npm run dev
+```
 
+## 👨‍💻 Autor
 
-A aplicação estará disponível em:
-
-http://localhost:5173
-
-🚀 Possíveis Melhorias Futuras
-
-💾 Persistência do carrinho no LocalStorage
-
-🔗 Filtros sincronizados com a URL
-
-🧪 Testes unitários
-
-🧩 Migração para TypeScript
-
-👨‍💻 Autor
-
-Projeto desenvolvido por Levi Almeida, com foco em arquitetura front-end e simulação de um e-commerce real.
+Desenvolvido por Levi Almeida
+Projeto criado com foco em prática profissional e evolução contínua em front-end.
