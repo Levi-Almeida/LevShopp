@@ -1,16 +1,153 @@
-# React + Vite
+LeviShop — E-commerce Front-End em React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LeviShop é uma aplicação front-end desenvolvida em ReactJS, que consome a API pública DummyJSON para exibir produtos em formato de vitrine (cards), com filtros dinâmicos, infinite scroll, carrinho de compras e uma arquitetura organizada e escalável.
 
-Currently, two official plugins are available:
+O projeto foi desenvolvido com foco em boas práticas, organização de código e experiência do usuário, simulando o funcionamento de um e-commerce real.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Funcionalidades
 
-## React Compiler
+📦 Consumo da API pública DummyJSON
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🖼️ Exibição de produtos em formato de cards
 
-## Expanding the ESLint configuration
+🔍 Busca por nome do produto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🗂️ Filtro por categoria
+
+♾️ Infinite Scroll (carregamento automático ao rolar a página)
+
+🛒 Carrinho de compras lateral (drawer)
+
+🎨 Estilização moderna com Tailwind CSS
+
+🧠 Separação de responsabilidades (hooks, services, components)
+
+🧱 Tecnologias Utilizadas
+
+ReactJS
+
+JavaScript (ES6+)
+
+Vite
+
+Tailwind CSS
+
+DummyJSON API
+
+Intersection Observer API
+
+🌐 API Utilizada
+
+Documentação:
+👉 https://dummyjson.com/docs/products
+
+Rotas utilizadas:
+
+/products
+
+/products/search
+
+/products/category/:category
+
+📁 Estrutura do Projeto
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── ProductCard.jsx
+│   ├── CartDrawer.jsx
+│   ├── Filters.jsx
+│   └── EmptyState.jsx
+│
+├── pages/
+│   └── Home.jsx
+│
+├── hooks/
+│   └── useProducts.js
+│
+├── services/
+│   └── productsService.js
+│
+├── configs/
+│   └── categories.js
+│
+├── App.jsx
+└── main.jsx
+
+📌 Organização
+
+components/ → Componentes reutilizáveis de UI
+
+pages/ → Páginas da aplicação
+
+hooks/ → Regras de negócio e lógica de dados
+
+services/ → Comunicação com a API
+
+configs/ → Constantes e configurações globais
+
+ Arquitetura e Decisões Técnicas
+ Hook customizado (useProducts)
+
+Toda a lógica de:
+
+paginação
+
+busca
+
+filtros
+
+controle de loading
+
+infinite scroll
+
+foi encapsulada em um hook customizado, mantendo os componentes limpos e focados apenas na renderização.
+
+ Infinite Scroll
+
+O carregamento de novos produtos é feito automaticamente utilizando a Intersection Observer API, sem necessidade de botões de paginação.
+
+ Filtros
+
+Os filtros são aplicados de forma dinâmica e continuam funcionando mesmo quando novos produtos são carregados via scroll.
+
+ Estilização
+
+O projeto utiliza Tailwind CSS, permitindo:
+
+layout responsivo
+
+design moderno
+
+código CSS limpo e escalável
+
+▶️ Como rodar o projeto
+1️⃣ Clonar o repositório
+git clone https://github.com/seu-usuario/levishop.git
+
+2️⃣ Acessar a pasta
+cd levishop
+
+3️⃣ Instalar as dependências
+npm install
+
+4️⃣ Rodar o projeto
+npm run dev
+
+
+A aplicação estará disponível em:
+
+http://localhost:5173
+
+🚀 Possíveis Melhorias Futuras
+
+💾 Persistência do carrinho no LocalStorage
+
+🔗 Filtros sincronizados com a URL
+
+🧪 Testes unitários
+
+🧩 Migração para TypeScript
+
+👨‍💻 Autor
+
+Projeto desenvolvido por Levi Almeida, com foco em arquitetura front-end e simulação de um e-commerce real.
